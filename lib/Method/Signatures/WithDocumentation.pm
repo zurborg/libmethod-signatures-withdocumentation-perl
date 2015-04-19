@@ -83,6 +83,16 @@ Each of the attributes (except C<Deprecated>) requires a non-interpolated string
 
 no warnings 'redefine'; ## no critic
 
+=head2 Name
+
+Use another name instead of method/function for documentation.
+
+=cut
+
+sub UNIVERSAL::Name : ATTR(CODE,BEGIN,RAWDATA) {
+    _add_attr_doc(name => @_);
+}
+
 =head2 Purpose
 
 A brief description what the function/method does.
