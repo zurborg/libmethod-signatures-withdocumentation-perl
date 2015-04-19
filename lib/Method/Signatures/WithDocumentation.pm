@@ -33,7 +33,7 @@ around parse_proto => sub {
 
         my $short_sig = $parameter->type . ' ';
         $short_sig .= "\\" if $parameter->is_ref_alias;
-        $short_sig .= ':' if $parameter->is_named;
+        $short_sig = $parameter->variable_name.' => '.$short_sig if $parameter->is_named;
         $short_sig .= $parameter->variable;
         $short_sig = "[ $short_sig ]" unless $parameter->is_required;
 
