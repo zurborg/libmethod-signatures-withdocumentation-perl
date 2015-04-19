@@ -1,8 +1,9 @@
-#!perl -wT
+#!perl -w
 
 use Test::Most;
 
 use lib '.';
+use lib 'lib';
 use t::lib;
 
 my @tests = qw(foo bar);

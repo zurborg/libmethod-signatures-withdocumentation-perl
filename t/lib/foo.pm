@@ -2,7 +2,7 @@ package foo;
 
 use Method::Signatures::WithDocumentation;
 
-func ffoo ($a, $b, $c) :
+func ffoo ($a, \$b, $c?, $d = 1) :
     Purpose(
         ffoo_purpose
     )
@@ -49,7 +49,7 @@ func ffoo ($a, $b, $c) :
     ...
 }
 
-method mfoo ($a, $b, $c) :
+method mfoo (Int :$a, Str \:$b, Int|Str :$c!, :$d = 2 when { 1 == 0 }) :
     Purpose(
         mfoo_purpose
     )
