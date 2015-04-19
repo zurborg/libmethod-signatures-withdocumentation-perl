@@ -14,6 +14,7 @@ extends 'Method::Signatures';
 around parse_proto => sub {
     my ($orig, $self, @args) = @_;
     my $code = $self->$orig(@args);
+    return $code unless $self->{function_name};
     my $signature = $self->{signature};
     my @parameters = @{ $signature->parameters };
     my @short_sig;
