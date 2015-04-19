@@ -2,16 +2,20 @@ Revision history for Method-Signatures-WithDocumentation
 
 {{$NEXT}}
 
-0.001 2015-04-19
- - Initial release
-
  [API CHANGES]
 
  [BUG FIXES]
+ - Do not use require
+ - Skip anonymous functions
 
  [DOCUMENTATION]
+ - Mark named paramters in signatures
 
  [ENHANCEMENTS]
+ - Improve tests
+
+0.001 2015-04-19
+ - Initial release
 
 0.000 0000-00-00
 
