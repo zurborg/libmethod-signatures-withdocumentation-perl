@@ -211,8 +211,39 @@ This module extends L<Method::Signatures> to grab out parameter definitions. It 
 
 =head1 SEE ALSO
 
-=over 4
+=for :list
+* L<Pod::Weaver::Section::AutoDoc>
 
-=item * L<Pod::Weaver::Section::AutoDoc>
+=head1 FORMATTING TIPS
 
-=back
+For some readers it might be confusing the read a subroutine definition with many attributes. There is no best practise at the moment, but I suggest this template:
+
+    func foobar (Int $amount = 1) :
+        Purpose(
+            Prints out I<foo> and I<bar>
+        )
+        Example(
+            foobar(2); # prints two foos and two bars
+        )
+        Param(
+            $amount: how many foo and bar should be printed
+        )
+        Pod(
+            This function is an example to show you a fancy way for its documentation
+        )
+        Returns(
+            True on success
+        )
+        Throws(
+            An error message if there is no output device
+        )
+        Since(
+            1.000
+        )
+        Deprecated(
+            Use L</foobar_v2> instead.
+        )
+        Author(
+            John Doe
+        )
+    { ... }
