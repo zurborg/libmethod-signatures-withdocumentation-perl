@@ -207,7 +207,7 @@ __END__
 
 =head1 DESCRIPTION
 
-This module extends L<Method::Signatures> to grab out parameter definitions. It behaves also similiar to L<Sub::Documentation::Attributes>, but with an important fix to let it work together with L<Pod::Weaver::Section::AutoDoc> (which is also part of this package).
+This module extends L<Method::Signatures> to grab out parameter definitions. It behaves also similiar to L<Sub::Documentation::Attributes>, but with an important fix to let it work together with L<Pod::Weaver::Section::AutoDoc>.
 
 =head1 SEE ALSO
 

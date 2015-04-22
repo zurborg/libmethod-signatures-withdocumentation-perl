@@ -3,6 +3,7 @@ Revision history for Method-Signatures-WithDocumentation
 {{$NEXT}}
 
  [API CHANGES]
+ - Split out Pod::Weaver::Section::AutoDoc
 
  [BUG FIXES]
  - Do not use require

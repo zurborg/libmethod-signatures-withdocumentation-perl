@@ -1,18 +1,9 @@
 #!perl -w
 
-use Test::Most;
+use Test::More;
 
-use lib '.';
-use lib 'lib';
-use t::lib;
-
-my @tests = qw(foo bar);
-
-plan tests => scalar(@tests);
-
-foreach my $mod (@tests) {
-    my ($a, $b) = load_doc($mod);
-    is $a, $b, $mod;
+BEGIN {
+	use_ok("Method::Signatures::WithDocumentation");
 }
 
-done_testing();
+done_testing;
