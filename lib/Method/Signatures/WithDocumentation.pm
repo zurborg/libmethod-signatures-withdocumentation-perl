@@ -7,6 +7,7 @@ package Method::Signatures::WithDocumentation;
 use Attribute::Handlers;
 use Sub::Documentation 'add_documentation';
 use Moose;
+use Data::Alias;
 extends 'Method::Signatures';
 
 # VERSION
